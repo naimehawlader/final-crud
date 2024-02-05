@@ -6,7 +6,7 @@ const corsConfig ={
     Credential:true,
     methods:["GET","POST","PUT","DELETE"]
 }
-app.options("",cors(corsConfig))
+app.options("", cors(corsConfig))
 const app = express()
 app.use(cors(corsConfig))
 app.use(express.json())
