@@ -2,8 +2,8 @@ const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const corsConfig ={
-    origin:"",
-    Credential:true,
+    origin:"http://final-crud-server.vercel.app",
+    credential:true,
     methods:["GET","POST","PUT","DELETE"]
 }
 app.options("", cors(corsConfig))
