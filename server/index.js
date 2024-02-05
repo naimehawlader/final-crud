@@ -1,9 +1,14 @@
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
-
+const corsConfig ={
+    origin:"",
+    Credential:true,
+    methods:["GET","POST","PUT","DELETE"]
+}
+app.options("",cors(corsConfig))
 const app = express()
-app.use(cors())
+app.use(cors(corsConfig))
 app.use(express.json())
 
 const PORT = process.env.PORT || 9090
